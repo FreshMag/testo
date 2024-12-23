@@ -49,6 +49,6 @@ gitHooks {
     createHooks()
 }
 
-rootProject.name = "template-kt-mpp-project"
+rootProject.name = "testo"
 
 include(":example")
