@@ -1,7 +1,7 @@
 import io.github.gciatto.kt.mpp.Plugins
-import io.github.gciatto.kt.mpp.ProjectType
-import io.github.gciatto.kt.mpp.log
-import io.github.gciatto.kt.mpp.nodeVersion
+import io.github.gciatto.kt.mpp.helpers.ProjectType
+import io.github.gciatto.kt.mpp.utils.log
+import io.github.gciatto.kt.mpp.utils.nodeVersion
 
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
@@ -9,7 +9,7 @@ plugins {
     alias(libs.plugins.ktMpp.multiProjectHelper)
 }
 
-group = "io.github.gciatto"
+group = "io.github.freshmag"
 
 gitSemVer {
     excludeLightweightTags()
