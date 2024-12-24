@@ -65,10 +65,7 @@ jobs:
       - name: Publish To Maven Central
         run: |
           if [[ "${{ steps.compute-next-version.outputs.will-release }}" == "true" ]]; then
-              ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publishToMavenCentral
-          else
-          
-          fi
+              ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" :example:publishToMavenCentral
 #  staging-repo:
 #    runs-on: ubuntu-22.04
 #    needs:
