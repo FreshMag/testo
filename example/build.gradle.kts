@@ -1,8 +1,10 @@
-import org.danilopianini.gradle.mavencentral.DocStyle
+import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
-    alias(libs.plugins.ktMpp.mavenPublish)
+    alias(libs.plugins.mavenPublish)
 }
+
+
 
 kotlin {
     sourceSets {
@@ -31,32 +33,46 @@ kotlin {
     }
 }
 
-publishOnCentral {
-    val githubSlug = "FreshMag/testo"
-    projectUrl = "https://github.com/$githubSlug"
-    projectDescription = "Simple Kotlin Multiplatform test project"
-    licenseName = "Apache License 2.0"
-    projectLongName = "Testo Kotlin Multiplatform test project"
-    licenseUrl = "https://opensource.org/license/Apache-2.0/"
-    docStyle = DocStyle.HTML
-    publishing {
-        publications {
-            withType<MavenPublication>().configureEach {
-                if ("OSSRH" !in name) {
-                    artifact(tasks.javadocJar)
-                }
-                scmConnection = "git:git@github.com:$githubSlug"
-                projectUrl = "https://github.com/$githubSlug"
-                pom {
-                    developers {
-                        developer {
-                            name = "Francesco Magnani"
-                            email = "magnani.franci2000@gmail.com"
-                            url = "https://github.com/FreshMag"
-                        }
-                    }
-                }
+mavenPublishing {
+    // Define coordinates for the published artifact
+    coordinates(
+        "io.github.freshmag",
+        "testo-example",
+        version.toString()
+    )
+
+    // Configure POM metadata for the published artifact
+    pom {
+        name.set("KMP Library for saving data to the clipboard")
+        description.set("This library can be used by Android and iOS targets for the shared functionality of saving data to the clipboard")
+        inceptionYear.set("2024")
+        url.set("https://github.com/FreshMag/testo")
+
+        licenses {
+            license {
+                name.set("Apache License 2.0")
+                url.set("https://opensource.org/license/Apache-2.0/")
             }
         }
+
+        // Specify developer information
+        developers {
+            developer {
+                id.set("FreshMag")
+                name.set("Francesco Magnani")
+                email.set("pescomagnani@gmail.com")
+            }
+        }
+
+        // Specify SCM information
+        scm {
+            url.set("https://github.com/FreshMag/testo")
+        }
     }
+
+    // Configure publishing to Maven Central
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+
+    // Enable GPG signing for all publications
+    signAllPublications()
 }
