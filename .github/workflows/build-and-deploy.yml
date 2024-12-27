@@ -216,7 +216,9 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4.0.2
         with:
-          node-version: ${{ steps.node-version.outputs.version }}
+          node-version: "18.x" #${{ steps.node-version.outputs.version }}
+      - name: Set NPM Registry
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Semantic release
         env:
           ENFORCE_VERSION: "${{ needs.publish-on-maven.outputs.next-version }}"
