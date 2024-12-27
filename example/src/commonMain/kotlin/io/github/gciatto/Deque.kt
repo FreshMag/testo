@@ -4,6 +4,7 @@ package io.github.gciatto
 
 import kotlin.jvm.JvmName
 
+// Simple typealias for a deque
 typealias Dequeue<T> = MutableList<T>
 
 expect fun <T> dequeOf(vararg items: T): Dequeue<T>
