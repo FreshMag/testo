@@ -217,6 +217,7 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: "18.x" #${{ steps.node-version.outputs.version }}
+          registry-url: 'https://registry.npmjs.org/'
       - name: Set NPM Registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Semantic release

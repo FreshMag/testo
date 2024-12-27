@@ -25,5 +25,6 @@ config.plugins.push(
         }
     ],
     "@semantic-release/git",
+    "@semantic-release/npm",
 )
 module.exports = config
