@@ -220,6 +220,7 @@ jobs:
       - name: Semantic release
         env:
           ENFORCE_VERSION: "${{ needs.publish-on-maven.outputs.next-version }}"
+          GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
         run: |
           NEXT_VERSION="${{ needs.publish-on-maven.outputs.next-version }}"
           OVERRIDE_VERSION=$([[ "$NEXT_VERSION" != "" ]] && echo "-PforceVersion=$(echo $NEXT_VERSION)" || echo "")
