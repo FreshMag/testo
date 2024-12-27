@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/FreshMag/testo/compare/1.0.0...1.1.0) (2024-12-27)
+
+
+### Features
+
+* test commit for release ([fc00724](https://github.com/FreshMag/testo/commit/fc00724b392b4563f6592740fab475407e03a632))
+
+
+### Build and continuous integration
+
+* added npm publish plugin ([6248f3b](https://github.com/FreshMag/testo/commit/6248f3bea5bcc06e0f5c560846dee3fcdef80752))
+
 ## 1.0.0 (2024-12-27)
 
 
