@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/FreshMag/testo/compare/1.2.0...1.3.0) (2024-12-27)
+
+
+### Features
+
+* updated ci ([620e5d4](https://github.com/FreshMag/testo/commit/620e5d4024410afb2c607f4cc39b063e6bbdc6bf))
+
 ## [1.2.0](https://github.com/FreshMag/testo/compare/1.1.0...1.2.0) (2024-12-27)
 
 
