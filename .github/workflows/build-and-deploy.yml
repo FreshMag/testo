@@ -223,8 +223,7 @@ jobs:
         run: |
           NEXT_VERSION="${{ needs.publish-on-maven.outputs.next-version }}"
           OVERRIDE_VERSION=$([[ "$NEXT_VERSION" != "" ]] && echo "-PforceVersion=$(echo $NEXT_VERSION)" || echo "")
-          ./gradlew $OVERRIDE_VERSION allShadowJars
-          ./gradlew $OVERRIDE_VERSION dokkaHtmlMultiModuleZip
+#          ./gradlew $OVERRIDE_VERSION dokkaHtmlMultiModuleZip
           npm install
           npx semantic-release
   success:
