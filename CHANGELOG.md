@@ -1,3 +1,15 @@
+## [1.6.0](https://github.com/FreshMag/testo/compare/1.5.0...1.6.0) (2024-12-27)
+
+
+### Features
+
+* removed npm from release.config.js ([62558b6](https://github.com/FreshMag/testo/commit/62558b65664dc38f239d105eb0ed2939b6887750))
+
+
+### General maintenance
+
+* merge ([9109216](https://github.com/FreshMag/testo/commit/9109216646c60be00e6382bda7292b3ad8791ab5))
+
 ## [1.5.0](https://github.com/FreshMag/testo/compare/1.4.0...1.5.0) (2024-12-27)
 
 
