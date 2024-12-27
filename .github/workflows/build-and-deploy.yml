@@ -226,6 +226,7 @@ jobs:
           NEXT_VERSION="${{ needs.publish-on-maven.outputs.next-version }}"
           OVERRIDE_VERSION=$([[ "$NEXT_VERSION" != "" ]] && echo "-PforceVersion=$(echo $NEXT_VERSION)" || echo "")
           npm install
+          npm ci
           npx semantic-release
   success:
     runs-on: ubuntu-22.04
