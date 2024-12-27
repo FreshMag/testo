@@ -1,3 +1,15 @@
+## [1.5.0](https://github.com/FreshMag/testo/compare/1.4.0...1.5.0) (2024-12-27)
+
+
+### Features
+
+* modified name in package.json ([2ed03fe](https://github.com/FreshMag/testo/commit/2ed03fe331a4cf97b9302158f3546793b3554663))
+
+
+### Build and continuous integration
+
+* adjusted setup-node registry, modified release.config.js ([c3b922d](https://github.com/FreshMag/testo/commit/c3b922de2d868bac7bd7099d7ceacda34bd18ed5))
+
 ## [1.4.0](https://github.com/FreshMag/testo/compare/1.3.0...1.4.0) (2024-12-27)
 
 
