@@ -217,27 +217,16 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: ${{ steps.node-version.outputs.version }}
-      - uses: DanySK/build-check-deploy-gradle-action@2.4.0
+      - name: Semantic release
         env:
           ENFORCE_VERSION: "${{ needs.publish-on-maven.outputs.next-version }}"
-        with:
-          build-command: |
-            NEXT_VERSION="${{ needs.publish-on-maven.outputs.next-version }}"
-            OVERRIDE_VERSION=$([[ "$NEXT_VERSION" != "" ]] && echo "-PforceVersion=$(echo $NEXT_VERSION)" || echo "")
-            ./gradlew $OVERRIDE_VERSION allShadowJars
-            ./gradlew $OVERRIDE_VERSION dokkaHtmlMultiModuleZip
-          check-command: true
-          deploy-command: |
-            npm install
-            npx semantic-release
-          should-run-codecov: false
-          should-deploy: true
-          github-token: ${{ github.token }}
-          maven-central-password: ${{ secrets.MAVEN_PASSWORD }}
-          maven-central-username: ${{ secrets.MAVEN_USERNAME }}
-          npm-token: ${{ secrets.NPM_TOKEN }}
-          signing-key: ${{ secrets.SIGNING_KEY }}
-          signing-password: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          NEXT_VERSION="${{ needs.publish-on-maven.outputs.next-version }}"
+          OVERRIDE_VERSION=$([[ "$NEXT_VERSION" != "" ]] && echo "-PforceVersion=$(echo $NEXT_VERSION)" || echo "")
+          ./gradlew $OVERRIDE_VERSION allShadowJars
+          ./gradlew $OVERRIDE_VERSION dokkaHtmlMultiModuleZip
+          npm install
+          npx semantic-release
   success:
     runs-on: ubuntu-22.04
     needs:
