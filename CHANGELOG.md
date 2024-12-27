@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/FreshMag/testo/compare/1.1.0...1.2.0) (2024-12-27)
+
+
+### Features
+
+* dummy commit ([0974a7f](https://github.com/FreshMag/testo/commit/0974a7f2b2218989f1530bdc16341cc903df62d6))
+
+
+### Build and continuous integration
+
+* added node token to ci ([ccac4cc](https://github.com/FreshMag/testo/commit/ccac4cc357aa329f3eb92b90aec9c1fab2bc4d20))
+
 ## [1.1.0](https://github.com/FreshMag/testo/compare/1.0.0...1.1.0) (2024-12-27)
 
 
