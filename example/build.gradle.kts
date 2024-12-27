@@ -4,8 +4,6 @@ plugins {
     alias(libs.plugins.mavenPublish)
 }
 
-
-
 kotlin {
     sourceSets {
         commonMain {
