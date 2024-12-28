@@ -1,3 +1,10 @@
+## [1.9.0](https://github.com/FreshMag/testo/compare/1.8.0...1.9.0) (2024-12-28)
+
+
+### Features
+
+* added debug command inside release.config.js ([c261583](https://github.com/FreshMag/testo/commit/c261583654f7604d115555cfc767de971d90f2f8))
+
 ## [1.8.0](https://github.com/FreshMag/testo/compare/1.7.0...1.8.0) (2024-12-28)
 
 
