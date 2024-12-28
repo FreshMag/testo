@@ -2,7 +2,6 @@
 var version = "-PforceVersion=${process.env.ENFORCE_VERSION}"
 
 var publishCmd = `
-npm whoami 
 ./gradlew ${version} publishJsPackageToNpmjsRegistry || exit 4
 `
 

@@ -3,7 +3,11 @@
   "devDependencies": {
     "semantic-release-preconfigured-conventional-commits": "1.1.85"
   },
+  "author": "freshmag",
   "engines": {
     "node": "20.11"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
