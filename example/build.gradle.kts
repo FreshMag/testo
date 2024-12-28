@@ -4,6 +4,14 @@ plugins {
     alias(libs.plugins.mavenPublish)
 }
 
+npmPublish {
+    registries {
+        npmjs {
+            authToken.set(System.getenv("NPM_TOKEN"))
+        }
+    }
+}
+
 kotlin {
     sourceSets {
         commonMain {
