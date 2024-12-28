@@ -2,7 +2,6 @@ import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     alias(libs.plugins.mavenPublish)
-    alias(libs.plugins.ktMpp.npmPublish)
 }
 
 kotlin {

@@ -7,7 +7,6 @@ import io.github.gciatto.kt.mpp.utils.nodeVersion
 plugins {
     alias(libs.plugins.gitSemVer)
     alias(libs.plugins.ktMpp.multiProjectHelper)
-    id(libs.plugins.ktMpp.npmPublish.get().pluginId) version(libs.plugins.ktMpp.npmPublish.get().version.toString()) apply false
     //id(libs.plugins.ktMpp.mavenPublish.get().pluginId) version(libs.plugins.ktMpp.mavenPublish.get().version.toString()) apply false
 }
 
@@ -33,6 +32,7 @@ multiProjectHelper {
         add(Plugins.linter)
         add(Plugins.bugFinder)
         add(Plugins.versions)
+        add(Plugins.npmPublish)
     }
 
     ktProjectTemplate = buildSet {
