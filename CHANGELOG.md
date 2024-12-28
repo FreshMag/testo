@@ -1,3 +1,10 @@
+## [1.10.0](https://github.com/FreshMag/testo/compare/1.9.0...1.10.0) (2024-12-28)
+
+
+### Features
+
+* removed debug line, added author and publishConfig ([31ba5f4](https://github.com/FreshMag/testo/commit/31ba5f47788d8fd62f02c06cd27654232a09ffe2))
+
 ## [1.9.0](https://github.com/FreshMag/testo/compare/1.8.0...1.9.0) (2024-12-28)
 
 
