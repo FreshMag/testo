@@ -1,3 +1,15 @@
+## [1.11.0](https://github.com/FreshMag/testo/compare/1.10.0...1.11.0) (2024-12-28)
+
+
+### Features
+
+* dummy commit ([f724dae](https://github.com/FreshMag/testo/commit/f724dae10b9563233b5dfa4a65c6d670ac9e508f))
+
+
+### Build and continuous integration
+
+* added npmPublish block inside build.gradle.kts ([7a730fc](https://github.com/FreshMag/testo/commit/7a730fc5ec7839600c4cb84f14f2c1ad4beff4d5))
+
 ## [1.10.0](https://github.com/FreshMag/testo/compare/1.9.0...1.10.0) (2024-12-28)
 
 
