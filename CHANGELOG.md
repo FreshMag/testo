@@ -1,3 +1,20 @@
+## [1.8.0](https://github.com/FreshMag/testo/compare/1.7.0...1.8.0) (2024-12-28)
+
+
+### Features
+
+* dummy commit ([73af9f8](https://github.com/FreshMag/testo/commit/73af9f876f4c5a0b97481325d2655c74c3f29dab))
+
+
+### General maintenance
+
+* updated CHANGELOG.md ([355ee74](https://github.com/FreshMag/testo/commit/355ee749a287a3f10c397dd77cf526e2f93a7568))
+
+
+### Refactoring
+
+* removed unused line in build.gradle.kts ([02b2ba0](https://github.com/FreshMag/testo/commit/02b2ba0e83c9798a17088befab2539f84357f980))
+
 ## [1.7.0](https://github.com/FreshMag/testo/compare/1.6.0...1.7.0) (2024-12-28)
 
 
