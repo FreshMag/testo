@@ -1,9 +1,9 @@
 {
-  "name" : "testo-example",
+  "name": "testo-example",
   "devDependencies": {
     "semantic-release-preconfigured-conventional-commits": "1.1.85"
   },
   "engines": {
     "node": "20.11"
-  },
+  }
 }
