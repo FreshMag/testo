@@ -1,3 +1,11 @@
+## [1.11.1](https://github.com/FreshMag/testo/compare/1.11.0...1.11.1) (2024-12-28)
+
+
+### Bug Fixes
+
+* bad syntax inside package.json ([ac98140](https://github.com/FreshMag/testo/commit/ac981408b8f89c7e8959213b7539e367f3cd4e27))
+* updated the ci with permissions for semantic-release ([de0dacb](https://github.com/FreshMag/testo/commit/de0dacb7bbb59bf24dd4a8862b7245415fee190d))
+
 ## [1.11.0](https://github.com/FreshMag/testo/compare/1.10.0...1.11.0) (2024-12-28)
 
 
