@@ -201,6 +201,7 @@ jobs:
       - check-secrets
       - publish-on-maven
     runs-on: ubuntu-22.04
+    permissions: write-all
     if: |
       always() &&
       needs.check-secrets.outputs.run-with-secrets == 'true'
