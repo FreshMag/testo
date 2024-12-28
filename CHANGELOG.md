@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/FreshMag/testo/compare/1.6.0...1.7.0) (2024-12-28)
+
+
+### Features
+
+* modified gradle build by using Plugins of kt-mpp ([42b376d](https://github.com/FreshMag/testo/commit/42b376d7100041b277aa41e7808632afc0a0126a))
+
 ## [1.6.0](https://github.com/FreshMag/testo/compare/1.5.0...1.6.0) (2024-12-27)
 
 
