@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/FreshMag/testo/compare/1.12.0...1.12.1) (2024-12-29)
+
+
+### Bug Fixes
+
+* fixed missing name in package.json ([469342c](https://github.com/FreshMag/testo/commit/469342cfc8f251d63597f48130d553f43943b7b7))
+
 ## [1.12.0](https://github.com/FreshMag/testo/compare/1.11.1...1.12.0) (2024-12-29)
 
 
