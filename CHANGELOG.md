@@ -1,3 +1,10 @@
+## [1.12.3](https://github.com/FreshMag/testo/compare/1.12.2...1.12.3) (2024-12-29)
+
+
+### Bug Fixes
+
+* added environment variable ([e292201](https://github.com/FreshMag/testo/commit/e292201b335c40ca8df87c64581007c088e8008c))
+
 ## [1.12.2](https://github.com/FreshMag/testo/compare/1.12.1...1.12.2) (2024-12-29)
 
 
