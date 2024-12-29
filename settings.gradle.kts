@@ -52,4 +52,3 @@ gitHooks {
 rootProject.name = "testo"
 
 include(":example")
-include("app")

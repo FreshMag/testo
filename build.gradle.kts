@@ -31,13 +31,12 @@ multiProjectHelper {
         add(Plugins.linter)
         add(Plugins.bugFinder)
         add(Plugins.versions)
-        add(Plugins.npmPublish)
-        add(Plugins.fatJar)
     }
 
     ktProjectTemplate = buildSet {
         addAll(baseProjectTemplate)
         add(Plugins.multiplatform)
+        add(Plugins.npmPublish)
     }
 
     jvmProjectTemplate = buildSet {

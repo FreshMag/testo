@@ -44,7 +44,7 @@ mavenPublishing {
     coordinates(
         "io.github.freshmag",
         "testo-example",
-        version.toString()
+        version.toString(),
     )
 
     // Configure POM metadata for the published artifact
