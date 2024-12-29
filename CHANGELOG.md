@@ -1,3 +1,21 @@
+## [1.12.0](https://github.com/FreshMag/testo/compare/1.11.1...1.12.0) (2024-12-29)
+
+
+### Features
+
+* added fatJar plugin and release in the CI ([16998d9](https://github.com/FreshMag/testo/commit/16998d9086a884280e977d36a568b488461cb05e))
+
+
+### Bug Fixes
+
+* fixed new module causing issues with the shadow pluing ([78a85aa](https://github.com/FreshMag/testo/commit/78a85aad7aaff372fe0e97125d3a0f5a30791801))
+* removed failing command in the ci ([6d89783](https://github.com/FreshMag/testo/commit/6d897839515e0f9f227a18dd429ec54b248ecc76))
+
+
+### Build and continuous integration
+
+* added module 'app' ([b9468b4](https://github.com/FreshMag/testo/commit/b9468b46e5d81f8b083b4e819c14e39563e293b8))
+
 ## [1.11.1](https://github.com/FreshMag/testo/compare/1.11.0...1.11.1) (2024-12-28)
 
 
