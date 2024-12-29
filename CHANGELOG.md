@@ -1,3 +1,10 @@
+## [1.12.2](https://github.com/FreshMag/testo/compare/1.12.1...1.12.2) (2024-12-29)
+
+
+### Bug Fixes
+
+* fixed missing parameter to checkout action ([963c85c](https://github.com/FreshMag/testo/commit/963c85c9f8ea3b7830831da18c370ca9a00d1913))
+
 ## [1.12.1](https://github.com/FreshMag/testo/compare/1.12.0...1.12.1) (2024-12-29)
 
 
