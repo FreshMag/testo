@@ -230,6 +230,7 @@ jobs:
         run: |
           NEXT_VERSION="${{ needs.publish-on-maven.outputs.next-version }}"
           OVERRIDE_VERSION=$([[ "$NEXT_VERSION" != "" ]] && echo "-PforceVersion=$(echo $NEXT_VERSION)" || echo "")
+          ./gradlew :app:shadowJar
           npm install
           npm ci
           npx semantic-release

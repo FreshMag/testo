@@ -32,6 +32,7 @@ multiProjectHelper {
         add(Plugins.bugFinder)
         add(Plugins.versions)
         add(Plugins.npmPublish)
+        add(Plugins.fatJar)
     }
 
     ktProjectTemplate = buildSet {
