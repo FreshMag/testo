@@ -1,3 +1,10 @@
+## [1.12.4](https://github.com/FreshMag/testo/compare/1.12.3...1.12.4) (2024-12-29)
+
+
+### Bug Fixes
+
+* dummy commit ([a0f5345](https://github.com/FreshMag/testo/commit/a0f5345492669a52f89c83ec04b1cb9870a84f15))
+
 ## [1.12.3](https://github.com/FreshMag/testo/compare/1.12.2...1.12.3) (2024-12-29)
 
 
