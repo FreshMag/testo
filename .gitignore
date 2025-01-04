@@ -140,3 +140,10 @@ gradle-app.setting
 *.tokens
 
 .kotlin/
+.gradle/
+.vscode
+bin
+kotlin-js-store
+local.properties
+node_modules/
+*.DS_Store
