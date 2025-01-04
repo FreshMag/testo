@@ -1,5 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
-
 plugins {
     alias(libs.plugins.mavenPublish)
 }
@@ -75,9 +73,6 @@ mavenPublishing {
             url.set("https://github.com/FreshMag/testo")
         }
     }
-
-    // Configure publishing to Maven Central
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
 
     // Enable GPG signing for all publications
     signAllPublications()
