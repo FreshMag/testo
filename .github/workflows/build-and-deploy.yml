@@ -127,7 +127,6 @@ jobs:
     needs:
       - check-secrets
       - release
-      - build
       - test-extensively
     if: >-
       always() && (
