@@ -1,6 +1,3 @@
-@file:OptIn(ExperimentalWasmDsl::class)
-
-import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -125,8 +122,8 @@ mavenPublishing {
 
     // Configure POM metadata for the published artifact
     pom {
-        name.set("KMP Library for saving data to the clipboard")
-        description.set("This library can be used by Android and iOS targets for the shared functionality of saving data to the clipboard")
+        name.set("KMP Test project")
+        description.set("Example project for KMP")
         inceptionYear.set("2024")
         url.set("https://github.com/FreshMag/testo")
 
@@ -142,7 +139,7 @@ mavenPublishing {
             developer {
                 id.set("FreshMag")
                 name.set("Francesco Magnani")
-                email.set("pescomagnani@gmail.com")
+                email.set("magnani.franci2000@gmail.com")
             }
         }
 
