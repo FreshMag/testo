@@ -1,3 +1,10 @@
+## [1.13.0](https://github.com/FreshMag/testo/compare/1.12.4...1.13.0) (2025-01-04)
+
+
+### Features
+
+* updated CI and build file including correct publishing and building ([f2e1bcd](https://github.com/FreshMag/testo/commit/f2e1bcd878560e41a9f3e39b669d35f44ff749f3))
+
 ## [1.12.4](https://github.com/FreshMag/testo/compare/1.12.3...1.12.4) (2024-12-29)
 
 
