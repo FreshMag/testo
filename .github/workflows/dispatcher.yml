@@ -5,7 +5,7 @@ on:
       - 'dependabot/**'
     paths-ignore:
       - '.gitignore'
-      - '.mergify.yml'
+      - '.mergify.yml.yml'
       - 'CHANGELOG.md'
       - 'LICENSE'
       - 'README.md'

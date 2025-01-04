@@ -1,42 +1,32 @@
 [versions]
-kotlin = "1.9.22"
-dokka = "1.8.20"
-jvm = "11"
-node = "18-latest"
-npmPublish = "3.4.2"
-kotlinx-coroutines = "1.7.3"
-ktlint = "10.3.0"
-detekt = "1.22.0"
-shadowJar = "8.1.1"
-shadowJarLib = "2.0.3"
-ktMpp = "4.1.4"
-
-[plugins]
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
-gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning:3.1.1"
-ktMpp-bugFinder = { id = "io.github.gciatto.kt-mpp.bug-finder", version.ref = "ktMpp" }
-ktMpp-documentation = { id = "io.github.gciatto.kt-mpp.documentation", version.ref = "ktMpp" }
-ktMpp-linter = { id = "io.github.gciatto.kt-mpp.linter", version.ref = "ktMpp" }
-ktMpp-mavenPublish = { id = "io.github.gciatto.kt-mpp.maven-publish", version.ref = "ktMpp" }
-ktMpp-npmPublish = { id = "io.github.gciatto.kt-mpp.npm-publish", version.ref = "ktMpp" }
-ktMpp-versions = { id = "io.github.gciatto.kt-mpp.versions", version.ref = "ktMpp" }
-ktMpp-jsOnly = { id = "io.github.gciatto.kt-mpp.js-only", version.ref = "ktMpp" }
-ktMpp-jvmOnly = { id = "io.github.gciatto.kt-mpp.jvm-only", version.ref = "ktMpp" }
-ktMpp-multiplatform = { id = "io.github.gciatto.kt-mpp.multiplatform", version.ref = "ktMpp" }
-ktMpp-multiProjectHelper = { id = "io.github.gciatto.kt-mpp.multi-project-helper", version.ref = "ktMpp" }
-mavenPublish = { id = "com.vanniktech.maven.publish", version = "0.30.0" }
-nexusPublish = "de.marcphilipp.nexus-publish:0.4.0"
-shadowJar = { id = "com.github.johnrengelman.shadow", version.ref = "shadowJar" }
+kotest = "6.0.0.M1"
+kotlin = "2.0.21"
 
 [libraries]
-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-npmPublish = { module = "dev.petuska:npm-publish-gradle-plugin", version.ref = "npmPublish" }
-clikt = "com.github.ajalt.clikt:clikt:4.2.2"
-kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
-kotlin-stdlib-jvm = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
-kotlin-stdlib-js = { module = "org.jetbrains.kotlin:kotlin-stdlib-js", version.ref = "kotlin" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
-kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
-shadowJar = { module = "com.github.jengelman.gradle.plugins:shadow", version.ref = "shadowJarLib" }
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
+kotlin-test-common = { module = "org.jetbrains.kotlin:kotlin-test-common", version.ref = "kotlin" }
+kotlin-test-annotations-common = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
+
+[bundles]
+kotest-common = [
+    "kotest-assertions-core",
+    "kotest-framework-engine",
+]
+kotlin-testing-common = [
+    "kotlin-test-common",
+    "kotlin-test-annotations-common",
+]
+
+[plugins]
+dokka = "org.jetbrains.dokka:2.0.0"
+gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin:3.1.7"
+kotest-multiplatform = { id = "io.kotest.multiplatform", version.ref = "kotest" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-qa = "org.danilopianini.gradle-kotlin-qa:0.76.0"
+multiJvmTesting = "org.danilopianini.multi-jvm-test-plugin:2.0.0"
+npm-publish = "dev.petuska.npm.publish:3.5.1"
+publishOnCentral = "org.danilopianini.publish-on-central:6.0.0"
+taskTree = "com.dorongold.task-tree:4.0.0"
+mavenPublish = { id = "com.vanniktech.maven.publish", version = "0.30.0" }

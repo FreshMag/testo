@@ -26,42 +26,11 @@ jobs:
     uses: ./.github/workflows/test-extensively.yml
     secrets: inherit
 
-  build:
-    needs:
-      - check-secrets
-      - test-extensively
-    # Uncomment if cross-compilation is needed
-#    strategy:
-#      fail-fast: false
-#      matrix:
-#        os: [ windows-2022, macos-12, ubuntu-22.04 ]
-#    runs-on: ${{ matrix.os }}
-    # Comment if cross-compilation is needed
-    runs-on: ubuntu-22.04
-    concurrency:
-      group: build-${{ github.workflow }}-${{ matrix.os }}-${{ github.event.number || github.ref }}
-      cancel-in-progress: true
-    env:
-      GRADLE_OPTS: -Dorg.gradle.daemon=false
-    steps:
-      - name: Checkout
-        uses: DanySK/action-checkout@0.2.14
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version: '17'
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-      - run: |
-          ./gradlew check --parallel --continue || ./gradlew check --parallel --continue
-          ./gradlew assemble --continue || ./gradlew assemble --continue
-
   publish-on-maven:
     runs-on: ubuntu-22.04
     needs:
       - check-secrets
-      - build
+      - test-extensively
     if: needs.check-secrets.outputs.run-with-secrets == 'true'
     outputs:
       next-version: ${{ steps.compute-next-version.outputs.next-version }}
