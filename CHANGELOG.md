@@ -1,3 +1,35 @@
+## [1.14.0](https://github.com/FreshMag/testo/compare/1.13.0...1.14.0) (2025-01-05)
+
+### Features
+
+* switched to single-module gradle build. Removed kt-mpp project helper ([043c8b8](https://github.com/FreshMag/testo/commit/043c8b8df6b0c6a6cba71fd620a6a9a6d2f4d78a))
+
+### Bug Fixes
+
+* fixed missing gradle task in the CI ([2663e0b](https://github.com/FreshMag/testo/commit/2663e0ba37cb43217bf9cf80b138a31ebd24de31))
+* updated versions ([c68a6f0](https://github.com/FreshMag/testo/commit/c68a6f05826170071f6ae3cbc6569992a458516e))
+
+### Build and continuous integration
+
+* converted release.config.js to extension mjs ([830fd70](https://github.com/FreshMag/testo/commit/830fd70d5d3d0c4eb7e440783c16b3c869b70e91))
+* converted release.config.mjs using mjs syntax ([912a8f5](https://github.com/FreshMag/testo/commit/912a8f5786aa4d2aa1e60cccb6735d3ad64b396c))
+* fixed java versions in the CI ([c17db9b](https://github.com/FreshMag/testo/commit/c17db9ba704b34b9c7e6095d1665f1b54c9b30d7))
+* fixed missing gradle task called ([9cea244](https://github.com/FreshMag/testo/commit/9cea24422013e1e9b46d708d4b5d465402c79425))
+* fixed missing gradle task called ([8340df5](https://github.com/FreshMag/testo/commit/8340df5eb1113f8de5980c052d13a1075a212f35))
+* fixed missing job 'build' ([ed2716c](https://github.com/FreshMag/testo/commit/ed2716c0639d69bc288875e0982e34dce7c08ccc))
+* fixed old call to gradle task that was using missing submodule ([b87248e](https://github.com/FreshMag/testo/commit/b87248e78b922c8b697eb5284de79ae382c35217))
+* fixed version of node retrieval. Added debug print. ([3df64c2](https://github.com/FreshMag/testo/commit/3df64c21260eb0402205a2bce8027d92b29c63ad))
+* set publish-on-maven job java version to 21 ([ec8fd3e](https://github.com/FreshMag/testo/commit/ec8fd3ee07a7cfea86f80a7037ac41d1911b7f41))
+* try adding package-lock.json from template project ([db39f4b](https://github.com/FreshMag/testo/commit/db39f4bc2ae9cf4c3bb0d43745e1b087744cf4bf))
+* try deleting package-lock.json ([e7225c1](https://github.com/FreshMag/testo/commit/e7225c1b3255c9e7cdecf593c1a1590d197737ac))
+* updated 'success' job needs ([ae7b494](https://github.com/FreshMag/testo/commit/ae7b4947d3dad2d63e9295864c01f0151fb82313))
+* updated "precompute-semantic-release-version" ([cf0d376](https://github.com/FreshMag/testo/commit/cf0d376aed19292e6b4f839356a88942f5a8cc10))
+* updated package-lock.json ([367f767](https://github.com/FreshMag/testo/commit/367f767a14ccac4269801f30c38affdb24285e62))
+
+### General maintenance
+
+* removed unused stuff ([443ea06](https://github.com/FreshMag/testo/commit/443ea064ecd7e11d9b4ac78299bc61034313a796))
+
 ## [1.13.0](https://github.com/FreshMag/testo/compare/1.12.4...1.13.0) (2025-01-04)
 
 
