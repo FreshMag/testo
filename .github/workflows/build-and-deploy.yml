@@ -74,6 +74,7 @@ jobs:
         run: |
           if [[ "${{ steps.compute-next-version.outputs.will-release }}" == "true" ]]; then
             ./gradlew task
+            ./gradlew dependencies | grep "*maven*"
             ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publishAllPublicationsToMavenCentralRepository
           else
             echo "Not releasing"

@@ -1,3 +1,4 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -10,6 +11,7 @@ plugins {
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
     alias(libs.plugins.mavenPublish)
+    id("com.vanniktech.maven.publish.base") version "0.30.0"
 }
 
 group = "io.github.freshmag"
@@ -113,6 +115,7 @@ npmPublish {
 }
 
 mavenPublishing {
+
     // Define coordinates for the published artifact
     coordinates(
         "io.github.freshmag",
@@ -143,12 +146,13 @@ mavenPublishing {
             }
         }
 
+
         // Specify SCM information
         scm {
             url.set("https://github.com/FreshMag/testo")
         }
     }
-
     // Enable GPG signing for all publications
     signAllPublications()
+
 }
