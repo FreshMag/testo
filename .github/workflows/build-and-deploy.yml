@@ -73,6 +73,7 @@ jobs:
       - name: Publish To Maven Central
         run: |
           if [[ "${{ steps.compute-next-version.outputs.will-release }}" == "true" ]]; then
+            ./gradlew task
             ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publish
           else
             echo "Not releasing"
@@ -103,7 +104,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4.0.2
         with:
-          node-version: "18.x" #${{ steps.node-version.outputs.version }}
+          node-version: ${{ steps.node-version.outputs.version }}
           registry-url: 'https://registry.npmjs.org/'
       - name: Set NPM Registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
