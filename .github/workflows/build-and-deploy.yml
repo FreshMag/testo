@@ -56,7 +56,7 @@ jobs:
         run: |
           echo -n "$SIGNING_KEY" | base64 --decode | gpg --dearmor > ${HOME}/secring.gpg
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Add Gradle Properties
         env:
@@ -74,7 +74,7 @@ jobs:
         run: |
           if [[ "${{ steps.compute-next-version.outputs.will-release }}" == "true" ]]; then
             ./gradlew task
-            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publish
+            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publishAllPublicationsToMavenCentralRepository
           else
             echo "Not releasing"
           fi
@@ -108,6 +108,11 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
       - name: Set NPM Registry
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '21'
       - name: Semantic release
         env:
           ENFORCE_VERSION: "${{ needs.publish-on-maven.outputs.next-version }}"
