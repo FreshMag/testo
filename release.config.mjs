@@ -1,11 +1,12 @@
 
-var version = "-PforceVersion=${process.env.ENFORCE_VERSION}"
+const version = "-PforceVersion=${process.env.ENFORCE_VERSION}"
 
-var publishCmd = `
+const publishCmd = `
 ./gradlew ${version} publishJsPackageToNpmjsRegistry || exit 4
 `
 
-var config = require('semantic-release-preconfigured-conventional-commits');
+import config from 'semantic-release-preconfigured-conventional-commits' with { type: "json" };
+
 config.plugins.push(
     [
         "@semantic-release/exec",
@@ -13,17 +14,7 @@ config.plugins.push(
             "publishCmd": publishCmd,
         }
     ],
-    [
-        "@semantic-release/github",
-        {
-            "assets": [
-                { "path": "**/build/**/*redist*.jar" },
-                { "path": "**/build/**/*full*.jar" },
-                { "path": "**/build/**/*javadoc*.jar" },
-                { "path": "build/**/*javadoc*.zip" }
-            ]
-        }
-    ],
+    "@semantic-release/github",
     "@semantic-release/git",
 )
-module.exports = config
+export default config
