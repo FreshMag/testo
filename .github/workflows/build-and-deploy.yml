@@ -128,6 +128,7 @@ jobs:
       - check-secrets
       - release
       - test-extensively
+      - publish-on-maven
     if: >-
       always() && (
         contains(join(needs.*.result, ','), 'failure')
