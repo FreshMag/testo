@@ -1,4 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -146,7 +145,6 @@ mavenPublishing {
             }
         }
 
-
         // Specify SCM information
         scm {
             url.set("https://github.com/FreshMag/testo")
@@ -154,5 +152,4 @@ mavenPublishing {
     }
     // Enable GPG signing for all publications
     signAllPublications()
-
 }
