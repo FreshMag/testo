@@ -11,7 +11,15 @@ plugins {
     alias(libs.plugins.taskTree)
     alias(libs.plugins.mavenPublish)
     id("com.vanniktech.maven.publish.base") version "0.30.0"
+    `maven-publish`
 }
+
+apply(
+    plugin =
+        libs.plugins.mavenPublish
+            .get()
+            .pluginId,
+)
 
 group = "io.github.freshmag"
 
