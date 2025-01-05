@@ -4,7 +4,7 @@ package io.github.gciatto
 
 import kotlin.jvm.JvmName
 
-// Simple typealias for a simple deque type that is mutable and can be used as a list
+// Simple typealias for a simple deque type that is mutable and can be used as a list as well.
 typealias Dequeue<T> = MutableList<T>
 
 /**
