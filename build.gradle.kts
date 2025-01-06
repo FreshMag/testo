@@ -1,4 +1,4 @@
-import com.vanniktech.maven.publish.SonatypeHost
+import org.danilopianini.gradle.mavencentral.JavadocJar
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -10,16 +10,8 @@ plugins {
     alias(libs.plugins.npm.publish)
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
-    alias(libs.plugins.mavenPublish)
-    id("com.vanniktech.maven.publish.base") version "0.30.0"
+    alias(libs.plugins.publishOnCentral)
 }
-
-apply(
-    plugin =
-        libs.plugins.mavenPublish
-            .get()
-            .pluginId,
-)
 
 group = "io.github.freshmag"
 
@@ -110,6 +102,35 @@ kotlin {
     }
 }
 
+tasks.dokkaJavadoc {
+    enabled = false
+}
+
+tasks.withType<JavadocJar>().configureEach {
+    val dokka = tasks.dokkaHtml.get()
+    dependsOn(dokka)
+    from(dokka.outputDirectory)
+}
+
+publishOnCentral {
+    projectLongName.set("KMP Test project")
+    projectDescription.set("Example project for KMP")
+    publishing {
+        publications {
+            withType<MavenPublication> {
+                pom {
+                    developers {
+                        developer {
+                            name.set("Francesco Magnani")
+                            email.set("magnani.franci2000@gmail.com")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 npmPublish {
     registries {
         register("npmjs") {
@@ -121,45 +142,12 @@ npmPublish {
     }
 }
 
-mavenPublishing {
-
-    // Define coordinates for the published artifact
-    coordinates(
-        "io.github.freshmag",
-        "testo-example",
-        version.toString(),
-    )
-
-    // Configure POM metadata for the published artifact
-    pom {
-        name.set("KMP Test project")
-        description.set("Example project for KMP")
-        inceptionYear.set("2024")
-        url.set("https://github.com/FreshMag/testo")
-
-        licenses {
-            license {
-                name.set("Apache License 2.0")
-                url.set("https://opensource.org/license/Apache-2.0/")
+publishing {
+    publications {
+        publications.withType<MavenPublication>().configureEach {
+            if ("OSSRH" !in name) {
+                artifact(tasks.javadocJar)
             }
-        }
-
-        // Specify developer information
-        developers {
-            developer {
-                id.set("FreshMag")
-                name.set("Francesco Magnani")
-                email.set("magnani.franci2000@gmail.com")
-            }
-        }
-
-        // Specify SCM information
-        scm {
-            url.set("https://github.com/FreshMag/testo")
         }
     }
-
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-    // Enable GPG signing for all publications
-    signAllPublications()
 }
