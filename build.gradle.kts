@@ -140,7 +140,7 @@ mavenPublishing {
     }
     // Enable GPG signing for all publications
     signAllPublications()
-    publishToMavenCentral(SonatypeHost.DEFAULT, automaticRelease = false)
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = false)
 }
 
 
