@@ -1,3 +1,4 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -10,8 +11,6 @@ plugins {
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
     alias(libs.plugins.mavenPublish)
-    id("com.vanniktech.maven.publish.base") version "0.30.0"
-    `maven-publish`
 }
 
 apply(
@@ -158,6 +157,8 @@ mavenPublishing {
             url.set("https://github.com/FreshMag/testo")
         }
     }
+
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     // Enable GPG signing for all publications
     signAllPublications()
 }
