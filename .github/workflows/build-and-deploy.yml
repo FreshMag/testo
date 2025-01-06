@@ -74,14 +74,10 @@ jobs:
           echo "signing.password=${SIGNING_KEY_PASSWORD}" >> gradle.properties
           echo "signing.secretKeyRingFile=${HOME}/secring.gpg" >> gradle.properties
 
-      - name: List Gradle tasks
-        run: ./gradlew tasks --all
-
       - name: Publish To Maven Central
         run: |
-          ./gradlew clean build
           if [[ "${{ steps.compute-next-version.outputs.will-release }}" == "true" ]]; then
-            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" tasks publishAllPublicationsToMavenCentralRepository
+            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publishAllPublicationsToMavenCentralRepository
           else
             echo "Not releasing"
           fi

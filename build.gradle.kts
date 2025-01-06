@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
     alias(libs.plugins.mavenPublish)
+    id("com.vanniktech.maven.publish.base") version "0.30.0"
 }
 
 apply(
