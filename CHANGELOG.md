@@ -1,3 +1,13 @@
+## [1.14.3](https://github.com/FreshMag/testo/compare/1.14.2...1.14.3) (2025-01-06)
+
+### Bug Fixes
+
+* modified secrets name ([77b136f](https://github.com/FreshMag/testo/commit/77b136fcff0824ca6662cf8d40819429e37ab86e))
+
+### Build and continuous integration
+
+* added github package deploy ([9d0157f](https://github.com/FreshMag/testo/commit/9d0157f3391d8bb0db81d86693ef3c629c0fa4a9))
+
 ## [1.14.2](https://github.com/FreshMag/testo/compare/1.14.1...1.14.2) (2025-01-06)
 
 ### Bug Fixes
