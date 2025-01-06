@@ -103,12 +103,6 @@ kotlin {
 }
 
 mavenPublishing {
-    // Define coordinates for the published artifact
-    coordinates(
-        "io.github.freshmag",
-        "testo-example",
-        version.toString(),
-    )
 
     // Configure POM metadata for the published artifact
     pom {
