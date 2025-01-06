@@ -56,10 +56,7 @@ jobs:
           SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
         run: |
           echo -n "$SIGNING_KEY" | base64 --decode | gpg --dearmor > ${HOME}/secring.gpg
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
-          cache-disabled: 'true'
+      
 
       - name: Add Gradle Properties
         env:
@@ -74,10 +71,15 @@ jobs:
           echo "signing.password=${SIGNING_KEY_PASSWORD}" >> gradle.properties
           echo "signing.secretKeyRingFile=${HOME}/secring.gpg" >> gradle.properties
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-disabled: 'true'
+
       - name: Publish To Maven Central
         run: |
           if [[ "${{ steps.compute-next-version.outputs.will-release }}" == "true" ]]; then
-            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publish
+            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publishAllPublicationsToMavenCentralRepository
           else
             echo "Not releasing"
           fi
