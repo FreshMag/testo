@@ -143,7 +143,6 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = false)
 }
 
-
 npmPublish {
     registries {
         register("npmjs") {
