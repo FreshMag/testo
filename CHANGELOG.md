@@ -1,3 +1,36 @@
+## [1.14.1](https://github.com/FreshMag/testo/compare/1.14.0...1.14.1) (2025-01-06)
+
+### Bug Fixes
+
+* dummy commit ([bfafa47](https://github.com/FreshMag/testo/commit/bfafa4779eb0961eb2ae9f8804bc8b8d4b28df0e))
+* tried adding 'base' version of mavenPublish plugin ([91adf00](https://github.com/FreshMag/testo/commit/91adf0085996c9feb26b1835b8684c5cf312e4fe))
+
+### Build and continuous integration
+
+* added base plugin and removed debug prints ([fad8022](https://github.com/FreshMag/testo/commit/fad8022c1bf707278f3a61ea803b7424caca2ce2))
+* added environment ([52389ba](https://github.com/FreshMag/testo/commit/52389ba286536c9db767983d6dae1d3b30d636a7))
+* added in-memory key to environment ([4255291](https://github.com/FreshMag/testo/commit/4255291bd8377618616431c03252105603ea509d))
+* added setup-java in the release job. ([4f9988f](https://github.com/FreshMag/testo/commit/4f9988fd9eea7f1851ad21ff8744e9536bb809c3))
+* added sonatype host configuration of mavenPublish plugin ([3333cf7](https://github.com/FreshMag/testo/commit/3333cf718466cd122ad821b1d7460ab2b127dcc2))
+* changed publish command in the ci ([029f114](https://github.com/FreshMag/testo/commit/029f11414666fc0e1a4d2334adf02ac6480fd531))
+* changed publish command in the ci ([f74b345](https://github.com/FreshMag/testo/commit/f74b3459939e1c23b53052b702ac138fdfb00213))
+* re added cache disabling for setup gradle ([2e1c1d2](https://github.com/FreshMag/testo/commit/2e1c1d2aea0b3aa96940a4ee7faaca4f9dcb1ec9))
+* removed debug prints ([0dd03f1](https://github.com/FreshMag/testo/commit/0dd03f12332575ac335ef7c3a20c650b60140d51))
+* removed parameters for setup-gradle ([f144595](https://github.com/FreshMag/testo/commit/f14459564062db614e47b6cbf0cd7a3eefc54d41))
+* set CENTRAL_PORTAL as publication destination ([88d169f](https://github.com/FreshMag/testo/commit/88d169f8c28daac447d695252eff5acd81b560a7))
+* tried adding a debug print and a clean build task call ([9e8ab21](https://github.com/FreshMag/testo/commit/9e8ab2103140d15cb187848e2bc4c6c9356239eb))
+* tried changing setup-gradle configuration ([36a1fb5](https://github.com/FreshMag/testo/commit/36a1fb58647b67237b4ddbc4d3adf79bd9d40917))
+* tried commenting test job ([02cabe1](https://github.com/FreshMag/testo/commit/02cabe12162262e0b26de332f78bf9731dab7648))
+* tried re-adding setup-java ([93a1c5b](https://github.com/FreshMag/testo/commit/93a1c5bd857de328216d672237960115553ec41c))
+* tried switching to another maven publish plugin ([012721f](https://github.com/FreshMag/testo/commit/012721f795f3a68ca4ce304d2709230251cc65e2))
+* tried switching to another maven publish plugin ([920ea7b](https://github.com/FreshMag/testo/commit/920ea7bd568a56623d19a94c7abe8dbfabae72d6))
+* tried switching to env variable ([44208b2](https://github.com/FreshMag/testo/commit/44208b2bcba5b72db28fe6e0217b5d4bfca2fe3d))
+* updated adding maven publish plugin and forcibly applying mavenPublish plugin ([d3281aa](https://github.com/FreshMag/testo/commit/d3281aae96332b2a454e7753d878382c2c9910cc))
+
+### Style improvements
+
+* fixed style violations ([e593d63](https://github.com/FreshMag/testo/commit/e593d63303da2d36ef6e9ec0e9a6e8698a1414f3))
+
 ## [1.14.0](https://github.com/FreshMag/testo/compare/1.13.0...1.14.0) (2025-01-05)
 
 ### Features
