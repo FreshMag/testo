@@ -102,6 +102,16 @@ kotlin {
     }
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "githubPackages"
+            url = uri("https://maven.pkg.github.com/FreshMag/testo")
+            credentials(PasswordCredentials::class)
+        }
+    }
+}
+
 mavenPublishing {
 
     // Configure POM metadata for the published artifact
