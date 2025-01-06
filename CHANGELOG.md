@@ -1,3 +1,13 @@
+## [1.14.2](https://github.com/FreshMag/testo/compare/1.14.1...1.14.2) (2025-01-06)
+
+### Bug Fixes
+
+* dummy commit ([c716ded](https://github.com/FreshMag/testo/commit/c716dedb4e5d3d3fe702e2a60625cdf6f1d3d856))
+
+### Build and continuous integration
+
+* removed hard-coded coordinates, re-added caching for setup-gradle ([ab9be39](https://github.com/FreshMag/testo/commit/ab9be39e765e811d6d0457841a41dc8a18b7164e))
+
 ## [1.14.1](https://github.com/FreshMag/testo/compare/1.14.0...1.14.1) (2025-01-06)
 
 ### Bug Fixes
