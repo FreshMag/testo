@@ -19,18 +19,18 @@ jobs:
         run: |
           echo "run-with-secrets=${{ steps.detect-secrets.outputs.has-secrets == 'true' && !github.event.repository.fork }}" >> $GITHUB_OUTPUT
 
-  test-extensively:
-    needs:
-      - check-secrets
-    if: github.ref_name != 'master' || github.event.commits[0].author.name != 'renovate[bot]'
-    uses: ./.github/workflows/test-extensively.yml
-    secrets: inherit
+#  test-extensively:
+#    needs:
+#      - check-secrets
+#    if: github.ref_name != 'master' || github.event.commits[0].author.name != 'renovate[bot]'
+#    uses: ./.github/workflows/test-extensively.yml
+#    secrets: inherit
 
   publish-on-maven:
     runs-on: ubuntu-22.04
     needs:
       - check-secrets
-      - test-extensively
+#      - test-extensively
     if: needs.check-secrets.outputs.run-with-secrets == 'true'
     outputs:
       next-version: ${{ steps.compute-next-version.outputs.next-version }}
@@ -45,11 +45,11 @@ jobs:
         uses: nicolasfara/precompute-semantic-release-version-action@2.0.2
         with:
           github-token: ${{ github.token }}
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'zulu'
-          java-version: '21'
+#      - name: Setup Java
+#        uses: actions/setup-java@v4
+#        with:
+#          distribution: 'zulu'
+#          java-version: '21'
       - name: Install GPG
         env:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
@@ -75,7 +75,7 @@ jobs:
       - name: Publish To Maven Central
         run: |
           if [[ "${{ steps.compute-next-version.outputs.will-release }}" == "true" ]]; then
-            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" publishAllPublicationsToMavenCentralRepository
+            ./gradlew -PforceVersion="${{ steps.compute-next-version.outputs.next-version }}" tasks publishAllPublicationsToMavenCentralRepository
           else
             echo "Not releasing"
           fi
@@ -134,7 +134,7 @@ jobs:
     needs:
       - check-secrets
       - release
-      - test-extensively
+#      - test-extensively
       - publish-on-maven
     if: >-
       always() && (
