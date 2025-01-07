@@ -1,3 +1,56 @@
+## [2.0.0](https://github.com/FreshMag/testo/compare/1.14.3...2.0.0) (2025-01-07)
+
+### ⚠ BREAKING CHANGES
+
+* this is a test major release
+
+### Features
+
+* re-enabled test in the CI ([a780bec](https://github.com/FreshMag/testo/commit/a780bec1b201cf4c6e7b0014ece5c2ab99eb4bf7))
+* re-enabled test in the CI ([f4f2c73](https://github.com/FreshMag/testo/commit/f4f2c73a69fb0cbb6f2eb386eef8967d12676b21))
+* updated test-extensively.yml with matrix os ([f5490d1](https://github.com/FreshMag/testo/commit/f5490d154deba8b0288bcda00d60da80e64f1cf3))
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#3](https://github.com/FreshMag/testo/issues/3)) ([183e3c1](https://github.com/FreshMag/testo/commit/183e3c1206d90fdc248bffd29181b311df6f12f2))
+* **deps:** update node.js to v22.13.0 ([3309f06](https://github.com/FreshMag/testo/commit/3309f060e632bdec782a11354d5509fea3cc1cf8))
+* **deps:** update plugin kotlin-qa to v0.78.0 ([9534428](https://github.com/FreshMag/testo/commit/953442840d031d9476f6900c8ea2b1810c65e7b1))
+* **deps:** update plugin multijvmtesting to v3 ([2536bbb](https://github.com/FreshMag/testo/commit/2536bbbb93e2418d3400fb6b2483324384f22269))
+* **deps:** update plugin publishoncentral to v7 ([a9427d4](https://github.com/FreshMag/testo/commit/a9427d4e573f50fb180e999da3f7c95cad350bf2))
+
+### Bug Fixes
+
+* **deps:** update kotlin monorepo to v2.1.0 ([afb1b29](https://github.com/FreshMag/testo/commit/afb1b291af137386d2384903a8c74d74954ce241))
+* empty commit ([9160b70](https://github.com/FreshMag/testo/commit/9160b70b2db421d8fc15f40936cf4044999eaceb))
+* removed failing test ([a43b3d9](https://github.com/FreshMag/testo/commit/a43b3d96954a685d155bad975235e5c860bfeeda))
+* removed failing test ([1796c40](https://github.com/FreshMag/testo/commit/1796c402233e8f23d7f7b5a4aeb471e6340be123))
+
+### Tests
+
+* added failing test ([5b9ae4c](https://github.com/FreshMag/testo/commit/5b9ae4c90f8639ae626390794ea70ab7e9fe7a4f))
+* added failing test ([cd34865](https://github.com/FreshMag/testo/commit/cd348657e050a361422d9db4282093ab657c60d2))
+* added failing test to check pr ([819289c](https://github.com/FreshMag/testo/commit/819289c3bbf7552fbf2171bc56b1ff99385d8c5a))
+* added failing test to check pr ([adbd399](https://github.com/FreshMag/testo/commit/adbd399e15fdb98f82ec800d3fb791a9023f9a3a))
+* removed failing test ([3b628c0](https://github.com/FreshMag/testo/commit/3b628c04c10ac0b3172fded57da027b24d62a38a))
+* removed failing test ([1a0a90c](https://github.com/FreshMag/testo/commit/1a0a90cbf622b858249126e0910427afdfa7dcad))
+
+### Build and continuous integration
+
+* added needs for test job ([112cdbd](https://github.com/FreshMag/testo/commit/112cdbdf75ad1f2d417fe44b78f5901abcda8ed7))
+* added needs for test job ([98abd2d](https://github.com/FreshMag/testo/commit/98abd2de9b9c5c510fc76d94bfa7c87eee9967ed))
+* **deps:** update actions/checkout action to v4.2.2 ([97d66d4](https://github.com/FreshMag/testo/commit/97d66d4e02ad72eb2e3db52500a7da878bf5c84c))
+* **deps:** update actions/setup-node action to v4.0.4 ([676f1c4](https://github.com/FreshMag/testo/commit/676f1c4bf02675b287d98d54fd6a7c3efa7a4c90))
+* **deps:** update actions/setup-node action to v4.1.0 ([4869bfc](https://github.com/FreshMag/testo/commit/4869bfc003ab244eab71541f35f9e84c6efff451))
+* **deps:** update dependency ubuntu to v24 ([42cd30d](https://github.com/FreshMag/testo/commit/42cd30d07ee66242fcdc50d5e36791d9aec74ae5))
+* **Mergify:** configuration update ([d42885b](https://github.com/FreshMag/testo/commit/d42885b56438a99c23b1bc3acba74cd9df2897f5))
+* tried wrapping bugged line with an if statement ([a7d915c](https://github.com/FreshMag/testo/commit/a7d915cb4e491ff37b6eca1e6ee7f40790f95e38))
+* tried wrapping bugged line with an if statement ([521353e](https://github.com/FreshMag/testo/commit/521353e6e5c2c4b079cb9936c3606d7428e6277e))
+
+### Style improvements
+
+* fixed style violation ([3e82d95](https://github.com/FreshMag/testo/commit/3e82d95d158151247fffa8edfbd1ba45455b447b))
+* fixed style violation ([f408313](https://github.com/FreshMag/testo/commit/f4083136fd56d75af465313eda3bd1f717bcbfcb))
+
 ## [1.14.3](https://github.com/FreshMag/testo/compare/1.14.2...1.14.3) (2025-01-06)
 
 ### Bug Fixes
