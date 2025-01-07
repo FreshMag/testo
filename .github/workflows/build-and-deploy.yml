@@ -124,7 +124,7 @@ jobs:
     needs:
       - check-secrets
       - release
-#      - test-extensively
+      - test-extensively
       - publish-on-maven
     if: >-
       always() && (
