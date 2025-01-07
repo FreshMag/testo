@@ -19,12 +19,12 @@ jobs:
         run: |
           echo "run-with-secrets=${{ steps.detect-secrets.outputs.has-secrets == 'true' && !github.event.repository.fork }}" >> $GITHUB_OUTPUT
 
-#  test-extensively:
-#    needs:
-#      - check-secrets
-#    if: github.ref_name != 'master' || github.event.commits[0].author.name != 'renovate[bot]'
-#    uses: ./.github/workflows/test-extensively.yml
-#    secrets: inherit
+  test-extensively:
+    needs:
+      - check-secrets
+    if: github.ref_name != 'master' || github.event.commits[0].author.name != 'renovate[bot]'
+    uses: ./.github/workflows/test-extensively.yml
+    secrets: inherit
 
   publish-on-maven:
     runs-on: ubuntu-22.04
