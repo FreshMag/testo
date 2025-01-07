@@ -5,7 +5,7 @@ on:
 
 jobs:
   check-secrets:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     outputs:
       run-with-secrets: ${{ steps.require-secrets.outputs.run-with-secrets }}
     steps:
@@ -27,7 +27,7 @@ jobs:
     secrets: inherit
 
   publish-on-maven:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs:
       - check-secrets
       - test-extensively
@@ -37,7 +37,7 @@ jobs:
       will-release: ${{ steps.compute-next-version.outputs.will-release }}
     steps:
       - name: Checkout the repo
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
       - name: Compute next release version
@@ -78,7 +78,7 @@ jobs:
     needs:
       - check-secrets
       - publish-on-maven
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     permissions: write-all
     if: |
       always() &&
@@ -86,14 +86,14 @@ jobs:
       needs.publish-on-maven.result == 'success'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
         with:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Find the version of Node from package.json
         id: node-version
         run: echo "version=$(jq -r .engines.node package.json)" >> $GITHUB_OUTPUT
       - name: Install Node
-        uses: actions/setup-node@v4.0.2
+        uses: actions/setup-node@v4.1.0
         with:
           node-version: ${{ steps.node-version.outputs.version }}
           registry-url: 'https://registry.npmjs.org/'
@@ -120,7 +120,7 @@ jobs:
           
 
   success:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs:
       - check-secrets
       - release
