@@ -5,12 +5,11 @@ on:
 
 jobs:
   check:
-#    strategy:
-#      fail-fast: false
-#      matrix:
-#        os: [ windows-2022, macos-14, ubuntu-24.04 ]
-#    runs-on: ${{ matrix.os }}
-    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ windows-2022, macos-14, ubuntu-24.04 ]
+    runs-on: ${{ matrix.os }}
     concurrency:
       group: build-${{ github.workflow }}-${{ matrix.os }}-${{ github.event.number || github.ref }}
       cancel-in-progress: true
