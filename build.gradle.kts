@@ -144,7 +144,9 @@ mavenPublishing {
     }
     // Enable GPG signing for all publications
     signAllPublications()
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = false)
+    if (System.getenv("CI") == "true") {
+        publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = false)
+    }
 }
 
 npmPublish {
