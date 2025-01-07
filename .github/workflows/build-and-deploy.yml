@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-22.04
     needs:
       - check-secrets
-#      - test-extensively
+      - test-extensively
     if: needs.check-secrets.outputs.run-with-secrets == 'true'
     outputs:
       next-version: ${{ steps.compute-next-version.outputs.next-version }}

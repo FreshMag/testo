@@ -23,6 +23,10 @@ class TestDequeue :
             dequeOf(1, 2, 3).also { it.add(4) } shouldBe dequeOf(1, 2, 3, 4)
         }
 
+        "A failing test" {
+            true shouldBe false
+        }
+
 //    @Test
 //    fun testPrepend() {
 //        assertEquals(
