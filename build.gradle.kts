@@ -154,9 +154,13 @@ npmPublish {
     registries {
         register("npmjs") {
             uri.set("https://registry.npmjs.org")
-            val npmToken: String? by project
-            authToken.set(npmToken)
-            dry.set(npmToken.isNullOrBlank())
+            if (System.getenv("CI") == "true") {
+                authToken.set(System.getenv("NPM_TOKEN"))
+            } else {
+                val npmToken: String? by project
+                authToken.set(npmToken)
+                dry.set(npmToken.isNullOrBlank())
+            }
         }
     }
 }

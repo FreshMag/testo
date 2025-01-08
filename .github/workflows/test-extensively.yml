@@ -20,8 +20,6 @@ jobs:
           fetch-depth: 0
       - uses: DanySK/build-check-deploy-gradle-action@3.5.28
         with:
-          build-command: |
-            ./gradlew jsMainClasses jsTestClasses --parallel || ./gradlew jsMainClasses jsTestClasses --parallel
           check-command: |
             ./gradlew check --parallel
           should-run-codecov: false
