@@ -41,17 +41,17 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting { }
-        val commonTest by getting {
-            dependencies {
-                implementation(libs.bundles.kotlin.testing.common)
-                implementation(libs.bundles.kotest.common)
-            }
+        commonTest.dependencies {
+            implementation(libs.bundles.kotlin.testing.common)
+            implementation(libs.bundles.kotest.common)
         }
-        val jvmTest by getting {
-            dependencies {
-                implementation(libs.kotest.runner.junit5)
-            }
+
+        jvmTest.dependencies {
+            implementation(libs.kotest.runner.junit5)
+        }
+
+        jsMain.dependencies {
+            implementation(npm("antlr4", "4.13.2"))
         }
     }
 
@@ -152,6 +152,12 @@ mavenPublishing {
 }
 
 npmPublish {
+    packages {
+        named("js") {
+            packageName = "testo-example"
+        }
+    }
+
     registries {
         register("npmjs") {
             uri.set("https://registry.npmjs.org")
