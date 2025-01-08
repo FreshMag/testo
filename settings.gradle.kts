@@ -23,7 +23,10 @@ develocity {
 
 gitHooks {
     commitMsg { conventionalCommits() }
-    createHooks()
+    preCommit {
+        tasks("detekt", "ktlintCheck")
+    }
+    createHooks(overwriteExisting = true)
 }
 
 rootProject.name = "testo".lowercase()
