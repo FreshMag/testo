@@ -1,3 +1,14 @@
+## [2.0.1](https://github.com/FreshMag/testo/compare/2.0.0...2.0.1) (2025-01-08)
+
+### Bug Fixes
+
+* enabled npm publishing and shortened CI structure ([81898c3](https://github.com/FreshMag/testo/commit/81898c3d0d93e2db18190442c1bbe2c8b12d57b0))
+
+### Style improvements
+
+* added style violation (on purpose) ([420f801](https://github.com/FreshMag/testo/commit/420f801f85ccd80be00ba5cae0c4fb446ab90452))
+* removed style violation ([e7e7068](https://github.com/FreshMag/testo/commit/e7e7068b658d6a053a18978c59e8ec9afa0a5446))
+
 ## [2.0.0](https://github.com/FreshMag/testo/compare/1.14.3...2.0.0) (2025-01-07)
 
 ### ⚠ BREAKING CHANGES
