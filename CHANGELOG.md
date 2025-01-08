@@ -1,3 +1,9 @@
+## [2.0.3](https://github.com/FreshMag/testo/compare/2.0.2...2.0.3) (2025-01-08)
+
+### Bug Fixes
+
+* fixed js module name avoid already taken 'testo' ([c01c081](https://github.com/FreshMag/testo/commit/c01c081e9bd58c2aa26c5c4c76f818edc09fae41))
+
 ## [2.0.2](https://github.com/FreshMag/testo/compare/2.0.1...2.0.2) (2025-01-08)
 
 ### Bug Fixes
