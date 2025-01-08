@@ -5,9 +5,8 @@ import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
-val antlrKotlinVersion = "1.0.1"
-
 plugins {
+    alias(libs.plugins.antlr.kotlin)
     alias(libs.plugins.dokka)
     alias(libs.plugins.gitSemVer)
     alias(libs.plugins.kotlin.multiplatform)
@@ -17,7 +16,6 @@ plugins {
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
     alias(libs.plugins.mavenPublish)
-    id("com.strumenta.antlr-kotlin") version "1.0.1"
 }
 
 group = "io.github.freshmag"
@@ -54,7 +52,7 @@ kotlin {
             }
 
             dependencies {
-                implementation("com.strumenta:antlr-kotlin-runtime:$antlrKotlinVersion")
+                implementation(libs.antlr.runtime)
             }
         }
 
@@ -69,40 +67,14 @@ kotlin {
     }
 
     js(IR) {
+        // avoid already taken "testo" package name on NPM
         moduleName = "testo-example"
         browser()
         nodejs()
         binaries.library()
     }
 
-    // Temporarily disabled due to https://youtrack.jetbrains.com/issue/KT-72858
-//    wasmWasi {
-//        nodejs()
-//        binaries.library()
-//    }
-
     applyDefaultHierarchyTemplate()
-//    /*
-//     * Linux 64
-//     */
-//    linuxX64(nativeSetup)
-//    linuxArm64(nativeSetup)
-//    /*
-//     * Win 64
-//     */
-//    mingwX64(nativeSetup)
-//    /*
-//     * Apple OSs
-//     */
-//    macosX64(nativeSetup)
-//    macosArm64(nativeSetup)
-//    iosArm64(nativeSetup)
-//    iosSimulatorArm64(nativeSetup)
-//    watchosArm32(nativeSetup)
-//    watchosArm64(nativeSetup)
-//    watchosSimulatorArm64(nativeSetup)
-//    tvosArm64(nativeSetup)
-//    tvosSimulatorArm64(nativeSetup)
 
     targets.all {
         compilations.all {
