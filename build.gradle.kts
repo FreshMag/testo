@@ -1,5 +1,11 @@
+import com.strumenta.antlrkotlin.gradle.AntlrKotlinTask
 import com.vanniktech.maven.publish.SonatypeHost
+import de.aaschmid.gradle.plugins.cpd.Cpd
+import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+
+val antlrKotlinVersion = "1.0.1"
 
 plugins {
     alias(libs.plugins.dokka)
@@ -11,6 +17,7 @@ plugins {
     alias(libs.plugins.multiJvmTesting)
     alias(libs.plugins.taskTree)
     alias(libs.plugins.mavenPublish)
+    id("com.strumenta.antlr-kotlin") version "1.0.1"
 }
 
 group = "io.github.freshmag"
@@ -41,6 +48,16 @@ kotlin {
     }
 
     sourceSets {
+        commonMain {
+            kotlin {
+                srcDir(layout.buildDirectory.dir("generatedAntlr"))
+            }
+
+            dependencies {
+                implementation("com.strumenta:antlr-kotlin-runtime:$antlrKotlinVersion")
+            }
+        }
+
         commonTest.dependencies {
             implementation(libs.bundles.kotlin.testing.common)
             implementation(libs.bundles.kotest.common)
@@ -48,10 +65,6 @@ kotlin {
 
         jvmTest.dependencies {
             implementation(libs.kotest.runner.junit5)
-        }
-
-        jsMain.dependencies {
-            implementation(npm("antlr4", "4.13.2"))
         }
     }
 
@@ -100,6 +113,79 @@ kotlin {
                 }
             }
         }
+    }
+}
+
+// Package set for generated ANTLR files
+val generatedFilesPackage = "io.github.testo.parsers.generated"
+
+// Output dir where ANTLR outputs are generated
+val generatedFilesOutputDir = "generatedAntlr/${generatedFilesPackage.replace(".", "/")}"
+
+val generateKotlinGrammarSource =
+    tasks.register<AntlrKotlinTask>("generateKotlinGrammarSource") {
+        dependsOn("cleanGenerateKotlinGrammarSource")
+
+        source =
+            fileTree(layout.projectDirectory.dir("antlr")) {
+                include("**/*.g4")
+            }
+        packageName = generatedFilesPackage
+        arguments = listOf("-visitor")
+
+        outputDirectory =
+            layout.buildDirectory
+                .dir(generatedFilesOutputDir)
+                .get()
+                .asFile
+    }
+
+/**
+ * Unfortunately, the generated code contains some unsafe calls suppression annotations that are not needed.
+ * At the time of writing, there is an open issue of the antlr-kotlin plugin that will address this
+ * (https://github.com/Strumenta/antlr-kotlin/issues/200).
+ *
+ * For the time being, this ugly workaround will remove the annotations from the generated code.
+ */
+generateKotlinGrammarSource.configure {
+    doLast {
+        val outputDirectory =
+            layout.buildDirectory
+                .dir(generatedFilesOutputDir)
+                .get()
+                .asFile
+
+        outputDirectory
+            .walkTopDown()
+            .filter { it.isFile && it.extension == "kt" }
+            .forEach { file ->
+                val updatedLines =
+                    file
+                        .readLines()
+                        .filterNot { it.contains("@Suppress(\"UNSAFE_CALL\")") }
+
+                file.writeText(updatedLines.joinToString("\n"))
+            }
+    }
+}
+
+tasks.withType<KotlinCompilationTask<*>> {
+    dependsOn(generateKotlinGrammarSource)
+}
+
+tasks.withType<Detekt>().configureEach {
+    dependsOn(generateKotlinGrammarSource)
+    exclude("**/generated/**")
+}
+
+tasks.withType<Cpd>().configureEach {
+    dependsOn(generateKotlinGrammarSource)
+    source = files("src/").asFileTree // excluding generated files
+}
+
+ktlint {
+    filter {
+        exclude("**/generated/**")
     }
 }
 
