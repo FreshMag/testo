@@ -1,3 +1,21 @@
+## [2.1.0](https://github.com/FreshMag/testo/compare/2.0.4...2.1.0) (2025-01-08)
+
+### Features
+
+* added example grammar ([a2ed814](https://github.com/FreshMag/testo/commit/a2ed814f0328acae1fe48d073327b44af3b43533))
+
+### Tests
+
+* added simple tests to check antlr usage ([6e0c992](https://github.com/FreshMag/testo/commit/6e0c9927e754fadc52d29cdffae292571106b67b))
+
+### Build and continuous integration
+
+* added antlr-kotlin to build.gradle.kts ([73c9b32](https://github.com/FreshMag/testo/commit/73c9b325caaee86b45b1a4709efcf065a5adb03b))
+* added git hook for detekt and ktlint tasks ([7c23b46](https://github.com/FreshMag/testo/commit/7c23b4679ad001170ca191ddc726e1d676f4bbdb))
+* downgraded gradle wrapper version to 8.8 to avoid build errors with antlr-kotlin ([6df396b](https://github.com/FreshMag/testo/commit/6df396be46ecdfb2984bd7f432e0b3675a0ee29a))
+* extracted antlr-runtime library to libs.versions.toml ([71db616](https://github.com/FreshMag/testo/commit/71db616cab33dfc9e390e3e18ab12b0cdf6f9d91))
+* updated checksum of gradle wrapper distribution ([6d20c62](https://github.com/FreshMag/testo/commit/6d20c62372bd5dbe46e6688717978f9e1c9efbba))
+
 ## [2.0.4](https://github.com/FreshMag/testo/compare/2.0.3...2.0.4) (2025-01-08)
 
 ### Bug Fixes
