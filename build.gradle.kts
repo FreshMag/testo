@@ -56,6 +56,7 @@ kotlin {
     }
 
     js(IR) {
+        moduleName = "testo-example"
         browser()
         nodejs()
         binaries.library()
