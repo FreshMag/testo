@@ -1,8 +1,10 @@
 [versions]
 kotest = "6.0.0.M1"
 kotlin = "2.1.0"
+antlr-kotlin = "1.0.1"
 
 [libraries]
+antlr-runtime = { module = "com.strumenta:antlr-kotlin-runtime", version.ref = "antlr-kotlin" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
@@ -20,6 +22,7 @@ kotlin-testing-common = [
 ]
 
 [plugins]
+antlr-kotlin = { id = "com.strumenta.antlr-kotlin", version.ref = "antlr-kotlin" }
 dokka = "org.jetbrains.dokka:2.0.0"
 gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin:3.1.7"
 kotest-multiplatform = { id = "io.kotest.multiplatform", version.ref = "kotest" }
@@ -27,6 +30,6 @@ kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref 
 kotlin-qa = "org.danilopianini.gradle-kotlin-qa:0.78.0"
 multiJvmTesting = "org.danilopianini.multi-jvm-test-plugin:3.1.2"
 npm-publish = "dev.petuska.npm.publish:3.5.1"
-publishOnCentral = "org.danilopianini.publish-on-central:7.0.4"
 taskTree = "com.dorongold.task-tree:4.0.0"
 mavenPublish = { id = "com.vanniktech.maven.publish", version = "0.30.0" }
+
