@@ -1,8 +1,6 @@
 
-const version = "-PforceVersion=${process.env.ENFORCE_VERSION}"
-
 const publishCmd = `
-./gradlew ${version} publish || exit 4
+./gradlew publish || exit 4
 `
 
 import config from 'semantic-release-preconfigured-conventional-commits' with { type: "json" };
