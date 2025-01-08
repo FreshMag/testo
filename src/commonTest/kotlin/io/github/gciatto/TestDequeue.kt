@@ -5,6 +5,8 @@ import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeInstanceOf
 
 class TestDequeue :
+
+
     StringSpec({
 
         "A deque should be created from literals" {
