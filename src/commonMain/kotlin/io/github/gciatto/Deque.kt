@@ -1,9 +1,7 @@
 @file:JvmName("Deque")
-@file:JsExport
 
 package io.github.gciatto
 
-import kotlin.js.JsExport
 import kotlin.jvm.JvmName
 
 // Simple typealias for a simple deque type that is mutable and can be used as a list as well. Cool!
