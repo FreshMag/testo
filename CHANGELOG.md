@@ -1,3 +1,9 @@
+## [2.2.2](https://github.com/FreshMag/testo/compare/2.2.1...2.2.2) (2025-01-09)
+
+### Bug Fixes
+
+* trying with task dependency named JsSourcesJar ([f85fe3c](https://github.com/FreshMag/testo/commit/f85fe3c09e26aeb29d38747dce905bf7862e9b8a))
+
 ## [2.2.1](https://github.com/FreshMag/testo/compare/2.2.0...2.2.1) (2025-01-09)
 
 ### Bug Fixes
