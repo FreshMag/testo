@@ -1,3 +1,24 @@
+## [2.2.0](https://github.com/FreshMag/testo/compare/2.1.0...2.2.0) (2025-01-09)
+
+### Features
+
+* forced npm publish ([0061736](https://github.com/FreshMag/testo/commit/00617364e53c9fff4a36dd797dc6d25b38b389e2))
+* removed JsExport, added debug class ([b310131](https://github.com/FreshMag/testo/commit/b3101313d2f9645542eb2f06f548453869b266db))
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([#25](https://github.com/FreshMag/testo/issues/25)) ([1dfefed](https://github.com/FreshMag/testo/commit/1dfefed23b7099867850fdf457a8292bea61d7a6))
+
+### Tests
+
+* added more tests for yaml ([796d4d2](https://github.com/FreshMag/testo/commit/796d4d241d05fbad39c68815345f7cc1da2665de))
+* added one more test for YAML ([6aee541](https://github.com/FreshMag/testo/commit/6aee541c2f0e0e3a20398ad36cb3eaeef2ffa490))
+* added skeleton test ([7ef36e3](https://github.com/FreshMag/testo/commit/7ef36e3237fc0ca67f802cffcc6f09e9b11fc38c))
+
+### Build and continuous integration
+
+* added yamlkt serialization library ([0f14bf9](https://github.com/FreshMag/testo/commit/0f14bf9d4fc65d8b7463900ff97e13ba5d7f3994))
+
 ## [2.1.0](https://github.com/FreshMag/testo/compare/2.0.4...2.1.0) (2025-01-08)
 
 ### Features
