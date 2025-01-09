@@ -1,3 +1,9 @@
+## [2.2.1](https://github.com/FreshMag/testo/compare/2.2.0...2.2.1) (2025-01-09)
+
+### Bug Fixes
+
+* trying with task dependency of Jar task ([ab7ce21](https://github.com/FreshMag/testo/commit/ab7ce21a1f59f7d82e10d1b33eb11dd94374dc84))
+
 ## [2.2.0](https://github.com/FreshMag/testo/compare/2.1.0...2.2.0) (2025-01-09)
 
 ### Features
