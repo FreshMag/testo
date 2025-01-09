@@ -161,6 +161,10 @@ tasks.withType<Jar>().configureEach {
     dependsOn(generateKotlinGrammarSource)
 }
 
+tasks.named("jsSourcesJar") {
+    dependsOn(generateKotlinGrammarSource)
+}
+
 ktlint {
     filter {
         exclude("**/generated/**")
