@@ -157,6 +157,10 @@ tasks.withType<Cpd>().configureEach {
     source = files("src/").asFileTree // excluding generated files
 }
 
+tasks.withType<Jar>().configureEach {
+    dependsOn(generateKotlinGrammarSource)
+}
+
 ktlint {
     filter {
         exclude("**/generated/**")
