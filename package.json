@@ -1,7 +1,7 @@
 {
   "name": "testo-example",
   "devDependencies": {
-    "semantic-release-preconfigured-conventional-commits": "1.1.118"
+    "semantic-release-preconfigured-conventional-commits": "1.1.119"
   },
   "engines": {
     "node": "22.13.0"
