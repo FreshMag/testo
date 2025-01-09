@@ -1,3 +1,9 @@
+## [2.2.3](https://github.com/FreshMag/testo/compare/2.2.2...2.2.3) (2025-01-09)
+
+### Bug Fixes
+
+* added dependency also for the dokkaHtml task ([4966b77](https://github.com/FreshMag/testo/commit/4966b7713c7db80a9d1cd4db88e12d9f3999cad3))
+
 ## [2.2.2](https://github.com/FreshMag/testo/compare/2.2.1...2.2.2) (2025-01-09)
 
 ### Bug Fixes
