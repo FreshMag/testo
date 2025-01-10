@@ -13,7 +13,7 @@ class Debug {
 }
 
 /**
- * Simple main function to reference Debug class to avoid DCE
+ * Simple main function to reference Debug class to avoid DCE.
  */
 fun main() {
     val debug = Debug()
