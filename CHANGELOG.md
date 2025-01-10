@@ -1,3 +1,13 @@
+## [2.2.6](https://github.com/FreshMag/testo/compare/2.2.5...2.2.6) (2025-01-10)
+
+### Bug Fixes
+
+* added reference to Debug class to avoid Dead Code Elimination ([7678017](https://github.com/FreshMag/testo/commit/76780179152afd04498a435f92efc2c821b63bcf))
+
+### Style improvements
+
+* added correct punctuation ([97a0e62](https://github.com/FreshMag/testo/commit/97a0e62e59fa65ae8cfd7bd65fa4803480aadf32))
+
 ## [2.2.5](https://github.com/FreshMag/testo/compare/2.2.4...2.2.5) (2025-01-10)
 
 ### Bug Fixes
