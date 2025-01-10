@@ -1,3 +1,9 @@
+## [2.3.0](https://github.com/FreshMag/testo/compare/2.2.6...2.3.0) (2025-01-10)
+
+### Features
+
+* added debugging functions to use both YAML and antlr from javascript ([c2ca6b9](https://github.com/FreshMag/testo/commit/c2ca6b9ecb2052b35dc9476a0fbdfc52a4da3d46))
+
 ## [2.2.6](https://github.com/FreshMag/testo/compare/2.2.5...2.2.6) (2025-01-10)
 
 ### Bug Fixes
