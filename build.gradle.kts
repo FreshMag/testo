@@ -173,6 +173,10 @@ tasks.named("dokkaHtml") {
     dependsOn(generateKotlinGrammarSource)
 }
 
+tasks.named("sourcesJar") {
+    dependsOn(generateKotlinGrammarSource)
+}
+
 ktlint {
     filter {
         exclude("**/generated/**")
