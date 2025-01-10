@@ -1,3 +1,9 @@
+## [2.2.5](https://github.com/FreshMag/testo/compare/2.2.4...2.2.5) (2025-01-10)
+
+### Bug Fixes
+
+* added dependency with 'sourcesJar' ([b462b69](https://github.com/FreshMag/testo/commit/b462b69d032ea7a17b49ce12848a0b341483b0ca))
+
 ## [2.2.4](https://github.com/FreshMag/testo/compare/2.2.3...2.2.4) (2025-01-10)
 
 ### Bug Fixes
