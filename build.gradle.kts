@@ -165,6 +165,10 @@ tasks.named("jsSourcesJar") {
     dependsOn(generateKotlinGrammarSource)
 }
 
+tasks.named("jvmSourcesJar") {
+    dependsOn(generateKotlinGrammarSource)
+}
+
 tasks.named("dokkaHtml") {
     dependsOn(generateKotlinGrammarSource)
 }
