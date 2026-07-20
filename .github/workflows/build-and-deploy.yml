@@ -42,7 +42,7 @@ jobs:
       needs.test-extensively.result == 'success'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4.4.0
         with:
           token: ${{ secrets.DEPLOYMENT_TOKEN }}
       - name: Find the version of Node from package.json
